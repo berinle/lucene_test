@@ -3,6 +3,7 @@ package com.lucenetest;
 import org.hibernate.search.annotations.ContainedIn;
 import org.hibernate.search.annotations.DocumentId;
 import org.hibernate.search.annotations.Field;
+import org.hibernate.search.annotations.Store;
 
 import javax.persistence.*;
 
@@ -23,15 +24,15 @@ public class Education {
     @Column(name="EDUCATION_ID")
     private Long id;
 
-    @Field
+    @Field(store = Store.YES)
     @Column(name="DEGREE_CODE")
     private String degreeCode;
 
-    @Field
+    @Field(store = Store.YES)
     @Column(name="INSTITUTION")
     private String institution;
 
-    @Field
+    @Field(store = Store.YES)
     @Column(name="DEGREE_YR")
     private int degreeYear;
 
