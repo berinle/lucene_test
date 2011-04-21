@@ -16,7 +16,7 @@ public class Main {
         Session s = HibernateUtil.getSession();
         FullTextSession fts = Search.getFullTextSession(s);
 
-        fts.createIndexer(Student.class)
+        fts.createIndexer(Student.class, Education.class)
         .batchSizeToLoadObjects(30)
         .threadsForSubsequentFetching(4)
         .threadsToLoadObjects(2)

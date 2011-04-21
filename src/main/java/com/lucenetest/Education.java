@@ -1,9 +1,6 @@
 package com.lucenetest;
 
-import org.hibernate.search.annotations.ContainedIn;
-import org.hibernate.search.annotations.DocumentId;
-import org.hibernate.search.annotations.Field;
-import org.hibernate.search.annotations.Store;
+import org.hibernate.search.annotations.*;
 
 import javax.persistence.*;
 
@@ -16,6 +13,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name="EDUCATION")
+@Indexed(index = "Education")
 public class Education {
 
     @Id
