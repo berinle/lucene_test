@@ -96,4 +96,8 @@ public class Publication {
     public void setType(String type) {
         this.type = type;
     }
+
+    public Student getStudent() {
+        return student;
+    }
 }
