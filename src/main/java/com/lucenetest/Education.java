@@ -1,5 +1,7 @@
 package com.lucenetest;
 
+import org.apache.commons.lang.builder.ToStringBuilder;
+import org.apache.commons.lang.builder.ToStringStyle;
 import org.hibernate.search.annotations.*;
 
 import javax.persistence.*;
@@ -22,7 +24,7 @@ public class Education {
     @Column(name="EDUCATION_ID")
     private Long id;
 
-    @Field(store = Store.YES)
+    @Field(store = Store.YES, name="e_degreeCode")
     @Column(name="DEGREE_CODE")
     private String degreeCode;
 
@@ -30,7 +32,7 @@ public class Education {
     @Column(name="INSTITUTION")
     private String institution;
 
-    @Field(store = Store.YES)
+    @Field(store = Store.YES, name="e_degreeYear")
     @Column(name="DEGREE_YR")
     private int degreeYear;
 
@@ -76,5 +78,9 @@ public class Education {
 
     public void setStudent(Student student) {
         this.student = student;
+    }
+
+    public String toString(){
+        return ToStringBuilder.reflectionToString(this, ToStringStyle.MULTI_LINE_STYLE);
     }
 }

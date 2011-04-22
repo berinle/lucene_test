@@ -191,6 +191,17 @@
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
+          <root url="jar://$USER_HOME$/.gradle/cache/commons-lang/commons-lang/jars/commons-lang-2.5.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$USER_HOME$/.gradle/cache/commons-lang/commons-lang/sources/commons-lang-2.5-sources.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
           <root url="jar://$USER_HOME$/.gradle/cache/org.codehaus.groovy/groovy/jars/groovy-1.7.7.jar!/" />
         </CLASSES>
         <JAVADOC />

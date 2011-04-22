@@ -4,6 +4,9 @@ import org.hibernate.Session;
 import org.hibernate.search.FullTextSession;
 import org.hibernate.search.Search;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by IntelliJ IDEA.
  * User: berinle
@@ -14,9 +17,15 @@ import org.hibernate.search.Search;
 public class Main {
     public static void main(String[] args) throws Exception {
         Session s = HibernateUtil.getSession();
+        List<Class> classes = new ArrayList<Class>() {{
+            add(Student.class);
+            add(Education.class);
+            add(Medical.class);
+            add(Publication.class);
+        }};
         FullTextSession fts = Search.getFullTextSession(s);
 
-        fts.createIndexer(Student.class, Education.class)
+        fts.createIndexer(Student.class, Education.class, Medical.class, Publication.class)
         .batchSizeToLoadObjects(30)
         .threadsForSubsequentFetching(4)
         .threadsToLoadObjects(2)

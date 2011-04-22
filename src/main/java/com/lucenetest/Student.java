@@ -1,5 +1,7 @@
 package com.lucenetest;
 
+import org.apache.commons.lang.builder.ToStringBuilder;
+import org.apache.commons.lang.builder.ToStringStyle;
 import org.hibernate.search.annotations.*;
 
 import javax.persistence.*;
@@ -33,6 +35,15 @@ public class Student {
     @OneToMany(mappedBy = "student")
     private Set<Education> educations;
 
+    @IndexedEmbedded
+    @OneToMany(mappedBy = "student")
+    private Set<Publication> publications;
+
+    @IndexedEmbedded
+    @OneToMany(mappedBy = "student")
+    private Set<Medical> medicals;
+
+
     public Long getId() {
         return id;
     }
@@ -63,5 +74,13 @@ public class Student {
 
     public void setEducations(Set<Education> educations) {
         this.educations = educations;
+    }
+
+    public String toString(){
+        return new ToStringBuilder(this, ToStringStyle.DEFAULT_STYLE)
+                .append("id", id)
+                .append("firstName", firstName)
+                .append("lastName", lastName)
+                .toString();
     }
 }

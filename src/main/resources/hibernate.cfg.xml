@@ -6,5 +6,7 @@
 	<session-factory>
         <mapping class="com.lucenetest.Student"/>
         <mapping class="com.lucenetest.Education"/>
+        <mapping class="com.lucenetest.Publication"/>
+        <mapping class="com.lucenetest.Medical"/>
     </session-factory>
 </hibernate-configuration>
