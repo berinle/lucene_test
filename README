@@ -1,3 +1,16 @@
 Forum question on correlated searches
 https://forum.hibernate.org/viewtopic.php?f=9&t=1001551&p=2423643&hilit=correlated#p2423643
 
+
+//querying via embedded
+//*appears* to work -- this can be deceiving!!!
++publications.publicationDate:[20060101 TO 20081231]
++publications.type:mag
++medicals.m_degreeCode:pf
++medicals.m_institution:john*
+
+//wrong (false positive)
++publications.publicationDate:[20060101 TO 20081231]
++publications.type:mag
++medicals.m_degreeCode:az
++medicals.m_institution:john*
