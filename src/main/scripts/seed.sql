@@ -18,3 +18,16 @@ insert into PUBLICATION (PUB_ID, AUTHOR, NAME, NO_PAGES, PUB_DATE, PUB_TYPE, STU
 insert into PUBLICATION (PUB_ID, AUTHOR, NAME, NO_PAGES, PUB_DATE, PUB_TYPE, STUDENT_ID) values (3, 'Jeff', 'Champinion Search', 10, '2006-01-01 00:00:00', 'WP', 100);
 insert into PUBLICATION (PUB_ID, AUTHOR, NAME, NO_PAGES, PUB_DATE, PUB_TYPE, STUDENT_ID) values (4, 'Bayo', 'Understanding HSEARCH', 50, '2007-03-02 00:00:00', 'MAG', 200);
 insert into PUBLICATION (PUB_ID, AUTHOR, NAME, NO_PAGES, PUB_DATE, PUB_TYPE, STUDENT_ID) values (5, 'Geoff', 'Taming Elastic Search', 5, '2006-02-14 00:00:00', 'ACT', 300);
+
+insert into PROGRAM (PROG_ID, NAME, SECRET_CODE) values (1, 'P1', 'P101');
+insert into PROGRAM (PROG_ID, NAME, SECRET_CODE) values (2, 'P2', 'P102');
+
+insert into PROGRAM_ASSIGNMENT (ID, PROGRAM_ID, STUDENT_ID) values (1, 1, 100);
+insert into PROGRAM_ASSIGNMENT (ID, PROGRAM_ID, STUDENT_ID) values (2, 2, 100);
+insert into PROGRAM_ASSIGNMENT (ID, PROGRAM_ID, STUDENT_ID) values (3, 1, 200);
+insert into PROGRAM_ASSIGNMENT (ID, PROGRAM_ID, STUDENT_ID) values (4, 2, 300);
+
+insert into SCORE (SCORE_ID, SCORE, PROGRAM_ID, STUDENT_ID) values (1, 50, 1, 100);
+insert into SCORE (SCORE_ID, SCORE, PROGRAM_ID, STUDENT_ID) values (2, 95, 2, 100);
+insert into SCORE (SCORE_ID, SCORE, PROGRAM_ID, STUDENT_ID) values (3, 80, 1, 200);
+insert into SCORE (SCORE_ID, SCORE, PROGRAM_ID, STUDENT_ID) values (4, 20, 2, 300);

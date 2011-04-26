@@ -22,10 +22,12 @@ public class Main {
             add(Education.class);
             add(Medical.class);
             add(Publication.class);
+            add(Program.class);
+            add(Score.class);
         }};
         FullTextSession fts = Search.getFullTextSession(s);
 
-        fts.createIndexer(Student.class, Education.class, Medical.class, Publication.class)
+        fts.createIndexer(classes.toArray(new Class[1]))
         .batchSizeToLoadObjects(30)
         .threadsForSubsequentFetching(4)
         .threadsToLoadObjects(2)

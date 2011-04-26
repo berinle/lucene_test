@@ -8,5 +8,8 @@
         <mapping class="com.lucenetest.Education"/>
         <mapping class="com.lucenetest.Publication"/>
         <mapping class="com.lucenetest.Medical"/>
+        <mapping class="com.lucenetest.Program"/>
+        <mapping class="com.lucenetest.Score"/>
+        <mapping class="com.lucenetest.ChoosenProgram"/>
     </session-factory>
 </hibernate-configuration>

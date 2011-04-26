@@ -43,6 +43,15 @@ public class Student {
     @OneToMany(mappedBy = "student")
     private Set<Medical> medicals;
 
+    @IndexedEmbedded
+    @OneToMany(mappedBy = "student")
+    private Set<ChoosenProgram> programs;
+
+
+    @IndexedEmbedded
+    @OneToMany(mappedBy = "student")
+    private Set<Score> scores;
+
 
     public Long getId() {
         return id;
@@ -82,5 +91,37 @@ public class Student {
                 .append("firstName", firstName)
                 .append("lastName", lastName)
                 .toString();
+    }
+
+    public Set<ChoosenProgram> getPrograms() {
+        return programs;
+    }
+
+    public void setPrograms(Set<ChoosenProgram> programs) {
+        this.programs = programs;
+    }
+
+    public Set<Publication> getPublications() {
+        return publications;
+    }
+
+    public void setPublications(Set<Publication> publications) {
+        this.publications = publications;
+    }
+
+    public Set<Medical> getMedicals() {
+        return medicals;
+    }
+
+    public void setMedicals(Set<Medical> medicals) {
+        this.medicals = medicals;
+    }
+
+    public Set<Score> getScores() {
+        return scores;
+    }
+
+    public void setScores(Set<Score> scores) {
+        this.scores = scores;
     }
 }
